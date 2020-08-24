@@ -21,18 +21,20 @@
   </div>
 
   <div class="menu menu--extended-offset d-none" id="menu">
-    <ul class="menu__list">
-      <li class="menu__list-item"><a href="index.html" class="menu__link">Главная</a></li>
-      <li class="menu__list-item"><a href="visitors.html" class="menu__link">Посетителям</a></li>
-      <li class="menu__list-item"><a href="tenants.html" class="menu__link">Арендаторам</a></li>
-      <li class="menu__list-item"><a href="owners.html" class="menu__link list-group-item disabled">Собственникам</a></li>
-      <li class="menu__list-item"><a href="contacts.html" class="menu__link">Контакты</a></li>
-      <li class="menu__list-item">
-        <a href="https://bagrationa49.ru/" class="menu__link">
-          <img class="menu__icon" src="./assets/img/logo-bagrationa59.png" alt="logo" /> Рембыттехника
-        </a>
-      </li>
-    </ul>
+    <div class="container">
+      <ul class="menu__list">
+        <li class="menu__list-item"><a href="index.html" class="menu__link">Главная</a></li>
+        <li class="menu__list-item"><a href="visitors.html" class="menu__link">Посетителям</a></li>
+        <li class="menu__list-item"><a href="tenants.html" class="menu__link">Арендаторам</a></li>
+        <li class="menu__list-item"><a href="owners.html" class="menu__link list-group-item disabled">Собственникам</a></li>
+        <li class="menu__list-item"><a href="contacts.html" class="menu__link">Контакты</a></li>
+        <li class="menu__list-item">
+          <a href="https://bagrationa49.ru/" class="menu__link">
+            <img class="menu__icon" src="./assets/img/logo-bagrationa59.png" alt="logo" /> Рембыттехника
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <div class="container pt-3 pb-3">
@@ -40,34 +42,33 @@
       <li class="mt-2">
         <i class="fas fa-map-marker-alt text-secondary"></i>
         <a href="https://yandex.ru/maps/org/dve_pyatyorki/1024420856/?ll=20.509270%2C54.727694&oid=1024420856&ol=biz&z=18">
-            Калининград, улица Горького, 55
+          Калининград, улица Горького, 55
         </a>
       </li>
       <li class="mt-2">
         <i class="far fa-clock text-secondary"></i> с 10:00 до 18:00
         <span id="text-open" class="text-success d-none">
-        (Сейчас открыто)
+          (Сейчас открыто)
         </span>
       </li>
     </ul>
   </div>
 
-
   <div class="container pb-3">
     <h2 class="pb-3">
-        Уважаемые владельцы помещений!
+      Уважаемые владельцы помещений!
     </h2>
     <p>
-        Если Ваше <strong>помещение сдается в аренду</strong> - сообщите, пожалуйста, программисту. Предоставленная Вами информация и контакты будут размещены на соответствующей странице сайта.
+      Если Ваше <strong>помещение сдается в аренду</strong> - сообщите, пожалуйста, программисту. Предоставленная Вами информация и контакты будут размещены на соответствующей странице сайта.
     </p>
     <p>
-        Если Вы <strong>купили помещение</strong> - сообщите,пожалуйста, программисту. Ваша информация, размещенная на сайте, поможет клиенту или арендатору найти Вас.
+      Если Вы <strong>купили помещение</strong> - сообщите,пожалуйста, программисту. Ваша информация, размещенная на сайте, поможет клиенту или арендатору найти Вас.
     </p>
     <p>
-        Если Ваше <strong>помещение было разделено на два и более</strong> (например 5 и 5а) - сообщите, пожалуйста, программисту. Ваша информация, вовремя размещенная на сайте, поможет арендатору узнать о новой сдаваемой площади.
+      Если Ваше <strong>помещение было разделено на два и более</strong> (например 5 и 5а) - сообщите, пожалуйста, программисту. Ваша информация, вовремя размещенная на сайте, поможет арендатору узнать о новой сдаваемой площади.
     </p>
     <p>
-        Проверьте, пожалуйста, иформацию о Вашем помещении:
+      Проверьте, пожалуйста, иформацию о Вашем помещении:
     </p>
     <p class="text-center">
       <a class="btn btn-danger btn-lg" href="http://shop.gorkogo55.ru/search">ВСЕ МАГАЗИНЫ ТУТ</a>
@@ -76,7 +77,7 @@
 
   <div class="container pb-3">
     <p>
-        Вся контактная информация находится на странице «Контакты». Вы можете задать любые вопросы. Мы работаем для Вас!
+      Вся контактная информация находится на странице «Контакты». Вы можете задать любые вопросы. Мы работаем для Вас!
     </p>
     <p class="text-center">
       <a class="btn btn-danger btn-lg" href="contacts.html">КОНТАКТЫ</a>
@@ -106,62 +107,47 @@
   </footer>
 
   <script type="text/javascript">
-    //Открытие и закрытие меню по нажатию на "гамбургер"
-    var menuBtn = document.getElementById("menuBtn");
-    var menu = document.getElementById("menu");
-    menuBtn.addEventListener('click', function(event) {
+    document.addEventListener("DOMContentLoaded", function() {
+      //
+      // Открытие и закрытие меню по нажатию на "гамбургер"
+      //
+      var menuBtn = document.getElementById("menuBtn");
+      var menu = document.getElementById("menu");
+      menuBtn.addEventListener('click', function(event) {
         if (menu.classList.contains("d-none")) {
-            menu.classList.remove("d-none");
+          menu.classList.remove("d-none");
         } else {
-            menu.classList.add("d-none");
+          menu.classList.add("d-none");
         }
         event.stopPropagation();
-    });
-    //закрытие меню, если оно открыто кликом по пустому месту
-    document.addEventListener("click", function(event) {
-      if (!menu.classList.contains("d-none")) {
-        menu.classList.add("d-none");
-      }
+      });
+
+      //
+      // закрытие меню, если оно открыто кликом по пустому месту
+      //
+      document.addEventListener("click", function(event) {
+        if (!menu.classList.contains("d-none")) {
+          menu.classList.add("d-none");
+        }
+      });
     });
   </script>
 
-<!-- Yandex.Metrika counter -->
-  <script type="text/javascript">
-    (function(m, e, t, r, i, k, a) {
-      m[i] =
-        m[i] ||
-        function() {
-        (m[i].a = m[i].a || []).push(arguments);
-        };
-      m[i].l = 1 * new Date();
-      (k = e.createElement(t)),
-      (a = e.getElementsByTagName(t)[0]),
-      (k.async = 1),
-      (k.src = r),
-      a.parentNode.insertBefore(k, a);
-    })(
-      window,
-      document,
-      "script",
-      "https://mc.yandex.ru/metrika/tag.js",
-      "ym"
-    );
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
     ym(53046907, "init", {
-        clickmap: true,
-        trackLinks: true,
-        accurateTrackBounce: true
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true
     });
   </script>
-  <noscript>
-    <div>
-      <img
-        src="https://mc.yandex.ru/watch/53046907"
-        style="position:absolute; left:-9999px;"
-        alt=""/>
-    </div>
-  </noscript>
+  <noscript><div><img src="https://mc.yandex.ru/watch/53046907" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <!-- /Yandex.Metrika counter -->
+
   <script src="./js/time.js"></script>
   <script src="./js/working-hours.js"></script>
 </body>
